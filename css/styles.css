@@ -10981,6 +10981,10 @@ html {
 .masthead .masthead-avatar {
   width: 15rem;
 }
+.masthead {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../img/background.gif') center center / cover no-repeat !important;
+}
 
 @media (min-width: 992px) {
   .masthead {
