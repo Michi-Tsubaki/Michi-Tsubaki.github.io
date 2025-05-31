@@ -1,1 +1,0 @@
-# Michi-Tsubaki.github.io
