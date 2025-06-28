@@ -10983,7 +10983,7 @@ html {
 }
 .masthead {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('../assets/img/background.gif') center center / cover no-repeat !important;
+                url('../assets/img/background.jpeg') center center / cover no-repeat !important;
 }
 
 @media (min-width: 992px) {
