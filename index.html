@@ -1,537 +1,604 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Michitoshi TSUBAKI</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top">Michitoshi TSUBAKI</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    メニュー
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#biography">プロフィール</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#publications">研究発表</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#robots">ロボット・システム</a></li>
-			<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#cv">履歴書</a></li>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Michitoshi TSUBAKI</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bibtex-parse-js@0.0.24/index.js"></script>
+</head>
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Michitoshi TSUBAKI</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                メニュー
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#biography">プロフィール</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#publications">研究発表</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#robots">ロボット・システム</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#cv">履歴書</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <img class="masthead-avatar mb-5" src="assets/img/avatar.png" alt="..." />
+            <h1 class="masthead-heading text-uppercase mb-0">Michitoshi TSUBAKI</h1>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="masthead-subheading font-weight-light mb-0">Undergraduate student, JSK Robotics Lab.</p>
+        </div>
+    </header>
+    
+    <section class="page-section bg-primary text-white mb-0" id="biography">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-white">プロフィール</h2>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h4 class="text-white mb-3">自己紹介</h4>
+                    <p class="lead">東京大学<a href="http://www.jsk.t.u-tokyo.ac.jp/"><font color="#ffffff"><u>情報システム工学研究室</u></font></a>の学部4年の椿道智です。</p>
+                    <p class="lead mb-5">研究分野はロボットシステム、コンピュータビジョン、動作計画、機械学習です。特に医療ロボットの自律知能を対象に研究に注力しています。</p>
+                    <h4 class="text-white mb-3">研究興味</h4>
+                    <ul class="lead">
+                        <li>自律医療ロボット - 機械学習，コンピュータビジョン，動作計画，意思決定</li>
+                        <li>卓球ロボット - ロボット工学，設計，運動学</li>
+                    </ul>
+                    <h4 class="text-white mb-3">スキル</h4>
+                    <ul class="lead">
+                        <img src="https://skillicons.dev/icons?i=python,julia,latex,ros,r,matlab,github,emacs" style="max-width: 100%;" />
+                    </ul>
+                    <h4 class="text-white mb-3">趣味</h4>
+                    <ul class="lead">
+                        <li>鉄道 - 鉄道メロディ（発車メロディ・接近メロディ）</li>
+                        <li>音楽 - クラリネット演奏・音楽鑑賞</li>
+                        <li>卓球、美術鑑賞など</li>
+                    </ul>
+                    <h4 class="text-white mb-3">教育</h4>
+                    <ul class="lead">
+                        <li><strong>2024年-現在：</strong> 東京大学 工学部 機械情報工学科</li>
+                        <li><strong>2022年-2024年：</strong> 東京大学 教養学部 理科一類</li>
+                        <li><strong>2018年-2021年：</strong> 栄光学園高等学校</li>
+                        <li><strong>2015年-2018年：</strong> 栄光学園中学校</li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-        <header class="masthead text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <img class="masthead-avatar mb-5" src="assets/img/avatar.png" alt="..." />
-                <h1 class="masthead-heading text-uppercase mb-0">Michitoshi TSUBAKI</h1>
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <p class="masthead-subheading font-weight-light mb-0">Undergraduate student, JSK Robotics Lab.</p>
-            </div>
-        </header>
-        
-        <section class="page-section bg-primary text-white mb-0" id="biography">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-white">プロフィール</h2>
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h4 class="text-white mb-3">自己紹介</h4>
-                        <p class="lead">東京大学<a href="http://www.jsk.t.u-tokyo.ac.jp/"><font color="#ffffff"><u>情報システム工学研究室</u></font></a>の学部4年の椿道智です。</p>
-                        <p class="lead mb-5">研究分野はロボットシステム、コンピュータビジョン、動作計画、機械学習です。特に医療ロボットの自律知能を対象に研究に注力しています。</p>
-			<h4 class="text-white mb-3">研究興味</h4>
-                        <ul class="lead">
-                          <li>自律医療ロボット - 機械学習，コンピュータビジョン，動作計画，意思決定</li>
-                          <li>卓球ロボット - ロボット工学，設計，運動学</li>
-                        </ul>
-			<h4 class="text-white mb-3">スキル</h4>
-                        <ul class="lead">
-			  <img src="https://skillicons.dev/icons?i=python,julia,latex,ros,r,matlab,github,emacs" style="max-width: 100%;" />
-			</ul>
-			<h4 class="text-white mb-3">趣味</h4>
-                        <ul class="lead">
-                          <li>鉄道 - 鉄道メロディ（発車メロディ・接近メロディ）</li>
-                          <li>音楽 - クラリネット演奏・音楽鑑賞</li>
-			  <li>卓球、美術鑑賞など</li>
-                        </ul>
-
-			<h4 class="text-white mb-3">教育</h4>
-                        <ul class="lead">
-                            <li><strong>2024年-現在：</strong> 東京大学 工学部 機械情報工学科</li>
-                            <li><strong>2022年-2024年：</strong> 東京大学 教養学部 理科一類</li>
-                            <li><strong>2018年-2021年：</strong> 栄光学園高等学校</li>
-                            <li><strong>2015年-2018年：</strong> 栄光学園中学校</li>
-                        </ul>
-                    </div>
-
-
-
-		    <div class="col-lg-4 text-center">
-                        <img class="img-fluid rounded-circle mb-3" src="assets/img/avatar.png" alt="椿道智" style="max-width: 200px;" />
-                        <h5 class="text-white">Michitoshi TSUBAKI</h5>
-                    </div>
+                <div class="col-lg-4 text-center">
+                    <img class="img-fluid rounded-circle mb-3" src="assets/img/avatar.png" alt="椿道智" style="max-width: 200px;" />
+                    <h5 class="text-white">Michitoshi TSUBAKI</h5>
                 </div>
             </div>
-        </section>
-        
-        <section class="page-section" id="publications">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">研究発表</h2>
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <h4 class="text-secondary mb-4">国内学会発表（発表予定）</h4>
-                        <div class="publication-item mb-4 p-4 border rounded">
-                            <h5 class="text-primary mb-2">糸残量把握と張力推定に基づく自律的で安全な連続縫合動作の実現</h5>
-                            <p class="mb-2"><strong>著者：</strong> <strong><u>椿道智</u></strong>，大日方慶樹，金沢直晃，長谷川峻，河原塚健人，岡田慧</p>
-                            <p class="mb-2"><strong>会議：</strong> 第34回日本コンピュータ外科学会大会(2025, 予定)</p>
-                            <p class="text-muted">パーソナル双腕ロボットによる自律縫合に関する発表。詳細は発表後に更新。</p>
-                        </div>
-                        <div class="publication-item mb-4 p-4 border rounded">
-                            <h5 class="text-primary mb-2">前陣速攻型をモデルにした卓上選手型卓球ロボットTakkuの開発</h5>
-                            <p class="mb-2"><strong>著者：</strong> <strong><u>椿道智</u></strong>，矢野倉伊織，小島邦生，岡田慧</p>
-                            <p class="mb-2"><strong>会議：</strong> 第43回日本ロボット学会学術講演会(2025, 予定)</p>
-                            <p class="text-muted">卓上選手型卓球ロボットTakkuの開発に関する発表。詳細は発表後に更新。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="page-section portfolio bg-light" id="robots">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">ロボット・システム</h2>
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row justify-content-center">
-		  
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assets/img/portfolio/PR2.jpg" alt="PR2 自律縫合" />
-                                <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
-                                    <h6 class="mb-0 fw-bold">パーソナル双腕ロボットPR2 自律縫合システム</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assets/img/portfolio/takku.png" alt="Takku 卓球ロボット" />
-                                <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
-                                    <h6 class="mb-0 fw-bold">Takku - 卓上選手型卓球ロボット</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assets/img/portfolio/tsubatar.png" alt="Tsubatar ロボット" />
-                                <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
-                                    <h6 class="mb-0 fw-bold">Tsubatar Robot - 1自由度アバターロボット</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assets/img/portfolio/freespace.png" alt="YOLOベース自由空間検出" />
-                                <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
-                                    <h6 class="mb-0 fw-bold">YOLOによるフリースペースの検出</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assets/img/portfolio/gyro.jpeg" alt="ジャイロ式二輪車" />
-                                <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
-                                    <h6 class="mb-0 fw-bold">ジャイロ式二輪車</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div class="position-relative">
-                                <img class="img-fluid" src="assets/img/portfolio/CoolGuardian.png" alt="Cool Guardian" />
-                                <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
-                                    <h6 class="mb-0 fw-bold">Cool Guardian</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-		    <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal7">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div class="position-relative">
-                                <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Julia_Programming_Language_Logo.svg" alt="Julia" />
-                                <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
-                                    <h6 class="mb-0 fw-bold">Julia パッケージ</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-	    
-        </section>
-        
-        <section class="page-section" id="cv">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">CV</h2>
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7 text-center">
-                        <p class="lead mb-4">CV(英文履歴書)は以下からダウンロードできます．</p>
-                        <a class="btn btn-xl btn-primary" href="cv/tsubaki_cv.pdf" target="_blank">
-                            <i class="fas fa-download me-2"></i>
-                                Download CV (PDF)
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-	
-        <section class="page-section" id="github">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Github Status</h2>
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 col-xl-7 text-center">
-		    <!-- GitHub Stats -->
-		    <img src="https://github-readme-stats.vercel.app/api?username=Michi-Tsubaki&show_icons=true&theme=vue-dark"
-			 alt="Michi-Tsubaki's GitHub stats" style="max-width: 100%;">
-
-		    <!-- GitHub Trophies -->
-		    <a href="https://github.com/ryo-ma/github-profile-trophy">
-		      <img src="https://github-profile-trophy.vercel.app/?username=Michi-Tsubaki&theme=discord"
-			   alt="GitHub Profile Trophy" style="max-width: 100%;">
-		    </a>
-                  </div>
-                </div>
-            </div>
-        </section>
-        
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Access</h4>
-                        <p class="lead mb-0">
-                            情報システム工学研究室
-                            <br />
-                            (JSK Robotics Lab.)
-                            <br />
-                            東京大学工学部機械情報工学科
-                        </p>
-                    </div>
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Link / Contact</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Michi-Tsubaki" target="_blank"><i class="fab fa-fw fa-github"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://linkedin.com/in/michi-tsubaki" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="mailto:michi.tsubaki.tech@gmail.com,tsubaki@jsk.t.u-tokyo.ac.jp"><i class="fas fa-fw fa-envelope"></i></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">このサイトについて</h4>
-                        <p class="lead mb-0">
-                            このウェブページは椿道智のポートフォリオです。画像や動画等の無断転載を禁じます。
-                            <br />
-                            © 2025 Michitoshi TSUBAKI
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Michitoshi TSUBAKI 2025</small></div>
         </div>
+    </section>
+    
+    <section class="page-section" id="publications">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">研究発表</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h4 class="text-secondary mb-4">国内学会発表（発表予定）</h4>
+                    <div id="publications-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="page-section portfolio bg-light" id="robots">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">ロボット・システム</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal2">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid" src="assets/img/portfolio/PR2.jpg" alt="PR2 自律縫合" />
+                            <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
+                                <h6 class="mb-0 fw-bold">パーソナル双腕ロボットPR2 自律縫合システム</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid" src="assets/img/portfolio/takku.png" alt="Takku 卓球ロボット" />
+                            <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
+                                <h6 class="mb-0 fw-bold">Takku - 卓上選手型卓球ロボット</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal3">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid" src="assets/img/portfolio/tsubatar.png" alt="Tsubatar ロボット" />
+                            <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
+                                <h6 class="mb-0 fw-bold">Tsubatar Robot - 1自由度アバターロボット</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal4">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid" src="assets/img/portfolio/freespace.png" alt="YOLOベース自由空間検出" />
+                            <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
+                                <h6 class="mb-0 fw-bold">YOLOによるフリースペースの検出</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal5">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid" src="assets/img/portfolio/gyro.jpeg" alt="ジャイロ式二輪車" />
+                            <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
+                                <h6 class="mb-0 fw-bold">ジャイロ式二輪車</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal6">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid" src="assets/img/portfolio/CoolGuardian.png" alt="Cool Guardian" />
+                            <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
+                                <h6 class="mb-0 fw-bold">Cool Guardian</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#robotModal7">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Julia_Programming_Language_Logo.svg" alt="Julia" />
+                            <div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-white text-center py-2">
+                                <h6 class="mb-0 fw-bold">Julia パッケージ</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="page-section" id="cv">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">CV</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7 text-center">
+                    <p class="lead mb-4">CV(英文履歴書)は以下からダウンロードできます．</p>
+                    <a class="btn btn-xl btn-primary" href="cv/tsubaki_cv.pdf" target="_blank">
+                        <i class="fas fa-download me-2"></i>
+                        Download CV (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="page-section" id="github">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Github Status</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7 text-center">
+                    <img src="https://github-readme-stats.vercel.app/api?username=Michi-Tsubaki&show_icons=true&theme=vue-dark"
+                         alt="Michi-Tsubaki's GitHub stats" style="max-width: 100%;">
+                    <a href="https://github.com/ryo-ma/github-profile-trophy">
+                        <img src="https://github-profile-trophy.vercel.app/?username=Michi-Tsubaki&theme=discord"
+                             alt="GitHub Profile Trophy" style="max-width: 100%;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Access</h4>
+                    <p class="lead mb-0">
+                        情報システム工学研究室
+                        <br />
+                        (JSK Robotics Lab.)
+                        <br />
+                        東京大学工学部機械情報工学科
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Link / Contact</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Michi-Tsubaki" target="_blank"><i class="fab fa-fw fa-github"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://linkedin.com/in/michi-tsubaki" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:michi.tsubaki.tech@gmail.com,tsubaki@jsk.t.u-tokyo.ac.jp"><i class="fas fa-fw fa-envelope"></i></a>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">このサイトについて</h4>
+                    <p class="lead mb-0">
+                        このウェブページは椿道智のポートフォリオです。画像や動画等の無断転載を禁じます。
+                        <br />
+                        © 2025 Michitoshi TSUBAKI
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; Michitoshi TSUBAKI 2025</small></div>
+    </div>
 
-        <!-- ロボットモーダル -->
-        <div class="portfolio-modal modal fade" id="robotModal1" tabindex="-1" aria-labelledby="robotModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Takku - 卓上選手型卓球ロボット</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/takku.png" alt="Takku 卓球ロボット" />
+    <div class="portfolio-modal modal fade" id="robotModal1" tabindex="-1" aria-labelledby="robotModal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Takku - 卓上選手型卓球ロボット</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/takku.png" alt="Takku 卓球ロボット" />
                                 <p class="mb-4">カメラでボールを認識し，卓上で卓球ロボットが卓球ボールを返球します．選手のような動作と外見のロボットのシステムとロボットアームを自作しました．
                                     詳細は学会発表後に更新する予定です．</p>
-                                    <a class="btn btn-xl btn-primary" href="https://www.ut-mech.com/jisyupro/table_tennis" target="_blank">
-                                        学園祭での展示(動画・インタビュー)
-                                    </a>
-
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        ウィンドウを閉じる
-                                    </button>
-                                </div>
+                                <a class="btn btn-xl btn-primary" href="https://www.ut-mech.com/jisyupro/table_tennis" target="_blank">
+                                    学園祭での展示(動画・インタビュー)
+                                </a>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    ウィンドウを閉じる
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="robotModal2" tabindex="-1" aria-labelledby="robotModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">パーソナル双腕ロボットPR2 自律縫合システム</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <iframe src="https://drive.google.com/file/d/1edW9st9atSvO2v8SxfpBR3YhX8ynU_Eh/preview" width="720" height="480" allow="autoplay"></iframe>
-                                    <p class="mb-4">パーソナル双腕ロボットPR2により連続自動縫合を実現しました。縫合糸の長さの管理と力覚フィードバックが重要であるということに着目しました。本研究は日本コンピュータ外科学会大会で発表予定です。
-                                        学会発表前のため、動画の閲覧にはUTOKYOアカウント(Google)のログインが必要です。詳細は学会発表後に更新する予定です。</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        ウィンドウを閉じる
-                                    </button>
+    </div>
+    <div class="portfolio-modal modal fade" id="robotModal2" tabindex="-1" aria-labelledby="robotModal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">パーソナル双腕ロボットPR2 自律縫合システム</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+                                <iframe src="https://drive.google.com/file/d/1edW9st9atSvO2v8SxfpBR3YhX8ynU_Eh/preview" width="720" height="480" allow="autoplay"></iframe>
+                                <p class="mb-4">パーソナル双腕ロボットPR2により連続自動縫合を実現しました。縫合糸の長さの管理と力覚フィードバックが重要であるということに着目しました。本研究は日本コンピュータ外科学会大会で発表予定です。
+                                    学会発表前のため、動画の閲覧にはUTOKYOアカウント(Google)のログインが必要です。詳細は学会発表後に更新する予定です。</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    ウィンドウを閉じる
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="robotModal3" tabindex="-1" aria-labelledby="robotModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tsubatar Robot</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-				    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/tsubatar1.png" alt="Tsubatar ロボット" />
-				    <h5>システム図</h5>
-				    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/tsubatar2.png" alt="システム図" />
-                                    <p class="mb-4">YOLOとOpenCVを使用して、人の顔（笑顔やまばたき）と首の姿勢を認識して、リアルタイムでインタラクションと表現を行う1自由度アバターロボットを製作しました。
-                                        詳細は以下のレポートでご確認いただけます。本作品は機械系アドバンストプログラミング発表会で発表しました。</p>
-                                    <a class="btn btn-xl btn-primary" href="assets/doc/tsubatar.pdf" target="_blank">
-                                        <i class="fas fa-download me-2"></i>
-                                        レポートを見る (PDF)
-                                    </a>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        ウィンドウを閉じる
-                                    </button>
+    </div>
+    <div class="portfolio-modal modal fade" id="robotModal3" tabindex="-1" aria-labelledby="robotModal3" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tsubatar Robot</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/tsubatar1.png" alt="Tsubatar ロボット" />
+                                <h5>システム図</h5>
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/tsubatar2.png" alt="システム図" />
+                                <p class="mb-4">YOLOとOpenCVを使用して、人の顔（笑顔やまばたき）と首の姿勢を認識して、リアルタイムでインタラクションと表現を行う1自由度アバターロボットを製作しました。
+                                    詳細は以下のレポートでご確認いただけます。本作品は機械系アドバンストプログラミング発表会で発表しました。</p>
+                                <a class="btn btn-xl btn-primary" href="assets/doc/tsubatar.pdf" target="_blank">
+                                    <i class="fas fa-download me-2"></i>
+                                    レポートを見る (PDF)
+                                </a>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    ウィンドウを閉じる
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="robotModal4" tabindex="-1" aria-labelledby="robotModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">YOLOによるフリースペースの検出</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/freespace.png" alt="YOLOベース自由空間検出" />
-                                    <p class="mb-4">機械系研究インターンシップにおいて、中野公彦教授のご指導のもと、YOLOによるフリースペースの検出の研究を行いました。「フリースペース情報」は、自動運転バスが右折する際の発進判断に不可欠な情報で、本研究は、路側器から取得した動画データのみを用いて取得する新しい手法を提案し、その改良に取り組みました。詳細は以下のレポートでご確認いただけます。</p>
-
-                                    <a class="btn btn-xl btn-primary" href="assets/doc/freespace.pdf" target="_blank">
-                                        <i class="fas fa-download me-2"></i>
-                                        レポートを見る (PDF)
-                                    </a>
-
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        ウィンドウを閉じる
-                                    </button>
+    </div>
+    <div class="portfolio-modal modal fade" id="robotModal4" tabindex="-1" aria-labelledby="robotModal4" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">YOLOによるフリースペースの検出</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/freespace.png" alt="YOLOベース自由空間検出" />
+                                <p class="mb-4">機械系研究インターンシップにおいて、中野公彦教授のご指導のもと、YOLOによるフリースペースの検出の研究を行いました。「フリースペース情報」は、自動運転バスが右折する際の発進判断に不可欠な情報で、本研究は、路側器から取得した動画データのみを用いて取得する新しい手法を提案し、その改良に取り組みました。詳細は以下のレポートでご確認いただけます。</p>
+                                <a class="btn btn-xl btn-primary" href="assets/doc/freespace.pdf" target="_blank">
+                                    <i class="fas fa-download me-2"></i>
+                                    レポートを見る (PDF)
+                                </a>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    ウィンドウを閉じる
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="robotModal5" tabindex="-1" aria-labelledby="robotModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">ジャイロ式二輪車</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/gyro.jpeg" alt="ジャイロ式二輪車" />
-				    <p class="mb-4">第8回全国科学の甲子園に神奈川県代表として栄光学園チームで出場し、私が参加した総合競技（実技競技③・事前工作課題）で製作したジャイロ二輪車が全国２位の成績を収めました。CDでできたフライホイールの回転によるジャイロ効果で二輪車が自立走行します。</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        ウィンドウを閉じる
-                                    </button>
+    </div>
+    <div class="portfolio-modal modal fade" id="robotModal5" tabindex="-1" aria-labelledby="robotModal5" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">ジャイロ式二輪車</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/gyro.jpeg" alt="ジャイロ式二輪車" />
+                                <p class="mb-4">第8回全国科学の甲子園に神奈川県代表として栄光学園チームで出場し、私が参加した総合競技（実技競技③・事前工作課題）で製作したジャイロ二輪車が全国２位の成績を収めました。CDでできたフライホイールの回転によるジャイロ効果で二輪車が自立走行します。</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    ウィンドウを閉じる
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="robotModal6" tabindex="-1" aria-labelledby="robotModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cool Guardian</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/CoolGuardianConcept.png" alt="Cool Guardian" />
-				    <div class="ratio ratio-16x9 rounded mb-5">
-				      <iframe src="https://www.youtube-nocookie.com/embed/3NI7sh1aeno?si=FnhKG75AaZucjHhJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-				      </iframe>
-				    </div>
-                                    <p class="mb-4">Rohm Open Hack Challenge 2018において、ゲーミフィケーションと電子工作、マイコンプログラミングでエアコンのエネルギー無駄遣いを削減する革新的システムを開発しました。当時高校生ながら、優秀賞を受賞しました。
-                                       詳細は<a href="https://deviceplus.jp/interview/rohc2018-003/" target="_blank">インタビュー記事</a>をご覧ください。</p>
-                                    <a class="btn btn-xl btn-primary" href="https://deviceplus.jp/interview/rohc2018-003/" target="_blank">
-                                        Deviceplusインタビュー記事
-                                    </a>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        ウィンドウを閉じる
-                                    </button>
+    </div>
+    <div class="portfolio-modal modal fade" id="robotModal6" tabindex="-1" aria-labelledby="robotModal6" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cool Guardian</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/CoolGuardianConcept.png" alt="Cool Guardian" />
+                                <div class="ratio ratio-16x9 rounded mb-5">
+                                    <iframe src="https://www.youtube-nocookie.com/embed/3NI7sh1aeno?si=FnhKG75AaZucjHhJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="mb-4">Rohm Open Hack Challenge 2018において、ゲーミフィケーションと電子工作、マイコンプログラミングでエアコンのエネルギー無駄遣いを削減する革新的システムを開発しました。当時高校生ながら、優秀賞を受賞しました。
+                                    詳細は<a href="https://deviceplus.jp/interview/rohc2018-003/" target="_blank">インタビュー記事</a>をご覧ください。</p>
+                                <a class="btn btn-xl btn-primary" href="https://deviceplus.jp/interview/rohc2018-003/" target="_blank">
+                                    Deviceplusインタビュー記事
+                                </a>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    ウィンドウを閉じる
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="robotModal7" tabindex="-1" aria-labelledby="robotModal7" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0">
-                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Julia パッケージ</h2>
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <img class="img-fluid rounded mb-5" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Julia_Programming_Language_Logo.svg" alt="Julia Language" />
-                                    <div class="mb-4">
-                                        <p>以下のJuliaパッケージを管理しています。</p>
-                                        <h3>ROS2.jl</h3>
-                                        <p><a href="https://juliahub.com/ui/Packages/General/ROS2">ROS2.jl</a>は、ROS2のPython3クライアントである(rclpy)のPythonラッパーパッケージです。Juliaの豊富なロボットモジュールをROSに統合したい方はご活用ください。
+    </div>
+    <div class="portfolio-modal modal fade" id="robotModal7" tabindex="-1" aria-labelledby="robotModal7" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Julia パッケージ</h2>
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <img class="img-fluid rounded mb-5" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Julia_Programming_Language_Logo.svg" alt="Julia Language" />
+                                <div class="mb-4">
+                                    <p>以下のJuliaパッケージを管理しています。</p>
+                                    <h3>ROS2.jl</h3>
+                                    <p><a href="https://juliahub.com/ui/Packages/General/ROS2">ROS2.jl</a>は、ROS2のPython3クライアントである(rclpy)のPythonラッパーパッケージです。Juliaの豊富なロボットモジュールをROSに統合したい方はご活用ください。
                                         ROS1は<a href="https://juliahub.com/ui/Packages/General/RobotOS">RobotOS.jl</a>があります。RobotOSを用いてJuliaの逆運動学モデルとつないだ例は <a href="https://github.com/Michi-Tsubaki/arm_robot_jl_ros">こちら</a> が参考になります。</p>
-                                        <h3>DualQuatUtils.jl</h3>
-                                        <p><a href="https://juliahub.com/ui/Packages/General/DualQuatUtils">DualQuatUtils</a>は、Julia言語で回転、クオータニオン、双対クオータニオンを計算するためのユーティリティモジュールです。
+                                    <h3>DualQuatUtils.jl</h3>
+                                    <p><a href="https://juliahub.com/ui/Packages/General/DualQuatUtils">DualQuatUtils</a>は、Julia言語で回転、クオータニオン、双対クオータニオンを計算するためのユーティリティモジュールです。
                                         ロボティクスやドローンの制御・動作計画への応用を想定しています。JualiデフォルトのQuaternionは双対クオータニオンに対応していないので、本パッケージが有用です。</p>
-                                        <p>他にも、Proxima Technology Inc.でソフトウェアエンジニアとしてJuliaで制御を行っています。</p>
-                                    </div>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        ウィンドウを閉じる
-                                    </button>
+                                    <p>他にも、Proxima Technology Inc.でソフトウェアエンジニアとしてJuliaで制御を行っています。</p>
                                 </div>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    ウィンドウを閉じる
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        function parseBibtex(bibtexString) {
+            const entries = [];
+            const entryRegex = /@(\w+)\{([^,]+),\s*([\s\S]*?)\n\}/g;
+            let match;
+            
+            while ((match = entryRegex.exec(bibtexString)) !== null) {
+                const [, type, key, content] = match;
+                const fields = {};
+                
+                const fieldRegex = /(\w+)\s*=\s*\{([^}]*)\}/g;
+                let fieldMatch;
+                
+                while ((fieldMatch = fieldRegex.exec(content)) !== null) {
+                    const [, fieldName, fieldValue] = fieldMatch;
+                    fields[fieldName.toLowerCase()] = fieldValue.trim();
+                }
+                
+                entries.push({
+                    type: type.toLowerCase(),
+                    key: key.trim(),
+                    fields: fields
+                });
+            }
+            
+            return entries;
+        }
+
+        // 発表リストを表示する関数
+        function displayPublications(entries) {
+            const publicationsList = document.getElementById('publications-list');
+            publicationsList.innerHTML = '';
+            
+            if (entries.length === 0) {
+                publicationsList.innerHTML = '<p class="text-muted">発表データが見つかりませんでした。</p>';
+                return;
+            }
+            
+            entries.forEach(entry => {
+                const item = document.createElement('div');
+                item.className = 'publication-item mb-4 p-4 border rounded';
+
+                const title = document.createElement('h5');
+                title.className = 'text-primary mb-2';
+                title.textContent = entry.fields.jtitle || entry.fields.title || 'タイトルなし';
+
+                const authors = document.createElement('p');
+                authors.className = 'mb-2';
+                authors.innerHTML = `<strong>著者：</strong> ${entry.fields.jauthor || entry.fields.author || '不明'}`;
+
+                const conference = document.createElement('p');
+                conference.className = 'mb-2';
+                const conferenceName = entry.fields.jbooktitle || entry.fields.booktitle || 'N/A';
+                const year = entry.fields.year || '';
+                const note = entry.fields.note ? `, ${entry.fields.note}` : '';
+                conference.innerHTML = `<strong>会議：</strong> ${conferenceName} (${year}${note})`;
+
+                const noteElement = document.createElement('p');
+                noteElement.className = 'text-muted';
+                noteElement.textContent = entry.fields.description || '詳細は発表後に更新。';
+
+                item.appendChild(title);
+                item.appendChild(authors);
+                item.appendChild(conference);
+                item.appendChild(noteElement);
+
+                publicationsList.appendChild(item);
+            });
+        }
+
+        // メイン処理
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('./bib.bib')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: bib.bibファイルが見つかりません`);
+                    }
+                    return response.text();
+                })
+                .then(bibtexString => {
+                    console.log('bib.bibファイルを読み込みました');
+                    const entries = parseBibtex(bibtexString);
+                    displayPublications(entries);
+                })
+                .catch(error => {
+                    console.warn('bib.bibファイルの読み込みに失敗:', error.message);
+                    console.log('サンプルデータを表示します');
+                    displayPublications(sampleBibtexData);
+                });
+        });
+    </script>
+</body>
 </html>
