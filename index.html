@@ -568,7 +568,17 @@
 
                 const noteElement = document.createElement('p');
                 noteElement.className = 'text-muted';
-                noteElement.textContent = entry.fields.description || '詳細は発表後に更新。';
+
+                let desc = entry.fields.description || '';
+                if (desc.startsWith('"') && desc.endsWith('"')) {
+                    desc = desc.slice(1, -1);
+                }
+
+                if (desc) {
+                    noteElement.innerHTML = desc;
+                } else {
+                    noteElement.textContent = '詳細は発表後に更新。';
+                }
 
                 item.appendChild(title);
                 item.appendChild(authors);
